@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Container>
-        <Header />
+        {/* <Header /> */}
         <Section
           title="Shop by use case"
           subtitle="Illuminate your"
