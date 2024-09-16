@@ -13,6 +13,7 @@ const Image = styled('img')({
   display: 'block',
   width: '100%',
   height: 'auto',
+  borderRadius: 'var(--border-radius)'
 });
 
 const Magnifier = styled('div')({

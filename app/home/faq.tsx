@@ -21,7 +21,6 @@ const faqData = [
     question: "What payment methods do you accept?",
     answer: "We accept Visa, MasterCard, American Express, and PayPal."
   },
-  // Removed duplicate entries
 ];
 
 const FAQ = () => {
@@ -37,52 +36,48 @@ const FAQ = () => {
         margin: 'auto',
         padding: { xs: 2, md: 4 },
         borderRadius: '12px',
-        color: '#E0E0E0', // Light text
-        boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.2)',
-        textAlign: 'center', // Center text within the box
-        fontFamily: '"Roboto", sans-serif', // Updated font
+        color: '#E0E0E0',
+        boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.5)',
       }}
     >
-      <Typography variant="h4" sx={{ textAlign: 'center', marginBottom: 4, fontWeight: '700' }}>
+      <Typography variant="h4" sx={{ textAlign: 'center', marginBottom: 4, fontWeight: 700 }}>
         Frequently Asked Questions
       </Typography>
-      <Grid
-        container
-        spacing={2}
-        justifyContent="center"
-        alignItems="center"
-        direction="row"
-        sx={{
-          gridTemplateColumns: {
-            xs: '1fr', // One column for smaller screens
-            sm: 'repeat(auto-fit, minmax(300px, 1fr))', // Responsive columns for larger screens
-          },
-        }}
-      >
+      <Grid container spacing={3} justifyContent="center" alignItems="center">
         {faqData.map((faq, index) => (
-          <Grid item xs={12} sm={6} key={index}>
+          <Grid item xs={12} key={index}>
             <Accordion
               expanded={expanded === `panel${index}`}
               onChange={handleChange(`panel${index}`)}
               sx={{
-                backgroundColor: '#2C2C2C', // Slightly lighter dark background
-                color: '#E0E0E0', // Light text
+                backgroundColor: '#1F1F1F',
+                color: '#E0E0E0',
                 marginBottom: 2,
-                boxShadow: 'none',
                 borderRadius: '8px',
-                '&:before': {
-                  display: 'none',
+                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'background 200ms, border 200ms',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  transform: 'translateY(-5px)',
+                },
+                '& .MuiAccordionSummary-content': {
+                  margin: 0,
                 },
               }}
             >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon sx={{ color: '#E0E0E0' }} />}
                 sx={{
-                  fontWeight: '700',
+                  fontWeight: 700,
                   fontSize: '1.2rem',
                   color: '#E0E0E0',
-                  '& .MuiAccordionSummary-content': {
-                    margin: 0,
+                  backgroundColor: '#1F1F1F',
+                  borderRadius: '8px 8px 0 0',
+                  transition: 'transform 200ms',
+                  '&:hover span': {
+                    transform: 'translateX(5px)',
                   },
                 }}
               >
@@ -92,6 +87,8 @@ const FAQ = () => {
                 sx={{
                   fontSize: '1rem',
                   color: '#E0E0E0',
+                  backgroundColor: '#1F1F1F',
+                  borderRadius: '0 0 8px 8px',
                 }}
               >
                 <Typography>{faq.answer}</Typography>

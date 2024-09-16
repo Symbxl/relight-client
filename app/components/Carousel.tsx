@@ -53,7 +53,9 @@ const Carousel = ({ images = [
               component="img"
               image={image}
               alt={`Slide ${index + 1}`}
-              sx={{ height: '100%', width: '100%', objectFit: 'cover' }}
+              sx={{
+                height: '100%', width: '100%', objectFit: 'cover'
+              }}
             />
           </Card>
         ))}

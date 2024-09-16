@@ -11,7 +11,7 @@ export default function Header() {
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        padding: "3rem",
+        padding: "3rem 0",
         overflow: "hidden",
       }}
     >
