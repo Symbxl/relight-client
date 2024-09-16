@@ -13,7 +13,6 @@ export default function Header() {
         display: "flex",
         flexDirection: "column",
         padding: "3rem 0",
-        overflow: "hidden",
         textAlign: "center",
       }}
     >
