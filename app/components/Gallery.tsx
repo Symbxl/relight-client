@@ -40,7 +40,7 @@ export const Gallery: React.FC<InstagramGalleryProps> = ({ images }) => {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const scrollAmount = 400; // Adjust this value as needed
+      const scrollAmount = 500; // Adjust this value to change scroll distance
       scrollRef.current.scrollBy({
         left: direction === 'right' ? scrollAmount : -scrollAmount,
         behavior: 'smooth',
@@ -85,7 +85,7 @@ export const Gallery: React.FC<InstagramGalleryProps> = ({ images }) => {
             sx={{
               flex: '0 0 auto',
               width: '100%',
-              maxWidth: 500, // Make images bigger
+              maxWidth: 800, // Increase to make images bigger
               scrollSnapAlign: 'center',
               p: 1,
               position: 'relative', // Positioning context for the overlay text

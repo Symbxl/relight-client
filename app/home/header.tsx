@@ -1,7 +1,8 @@
-"use client"
+"use client";
+
 import Section from "./section";
-import { Container } from "@mui/material";
-import Navigation from "./navbar"
+import { Container, Box } from "@mui/material";
+import Navigation from "./navbar";
 
 export default function Header() {
   return (
@@ -13,9 +14,13 @@ export default function Header() {
         flexDirection: "column",
         padding: "3rem 0",
         overflow: "hidden",
+        textAlign: "center",
+        zIndex: 1,
+        overflow: "hidden",
       }}
     >
       <Navigation />
+
 
       <Section
         subtitle="Live brighter with"
@@ -25,8 +30,7 @@ export default function Header() {
         bgColor="transparent" // Keep it transparent to allow the video to show through
         fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
         titleSize={{ xs: "1.5rem", sm: "2rem", md: "2.5rem" }}
-        subSize={{ xs: "3rem", sm: "4rem", md: "4.5rem" }}
-
+        subSize={{ xs: "2rem", sm: "3rem", md: "4rem" }} // Adjust size for better scaling
       />
     </Container>
   );

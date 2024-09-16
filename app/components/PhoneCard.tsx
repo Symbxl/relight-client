@@ -13,7 +13,7 @@ const PhoneCard: React.FC = ({ img, url, height = '844px' }: Props) => {
   return (
     <Box
       sx={{
-        width: '390px', // iPhone 15 width
+        width: '340px', // iPhone 15 width
         height: `${height}`, // iPhone 15 height
         borderRadius: '50px', // Adjusted for iPhone 15 shape
         backgroundColor: '#000', // Outer frame color
