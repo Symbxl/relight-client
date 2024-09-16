@@ -31,7 +31,7 @@ const Section: React.FC<SectionProps> = ({
   fithSub,
   sixthSub,
   seventhSub,
-  margin = "0",
+  margin = "3rem 0 0 0",
   titleColor = "hsl(210, 100%, 50%)",
   subtitleColor = "hsl(210, 100%, 50%)",
   titleSize = { xs: "1rem", sm: "1.2rem", md: "1.35rem" }, // Default values with more adaptability

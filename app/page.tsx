@@ -8,8 +8,16 @@ import Magnify from "./components/Magnify";
 import DisplayCarousel from "./home/display-carousel";
 import DisplayFAQ from "./home/display-faq";
 import { Container } from "./containers/display-container";
+import Gallery from "./components/Gallery";
+import Slide from "./home/display-slide";
 
 export default function Home() {
+  const images = [
+    { url: 'https://framerusercontent.com/images/syG1Lx8V7godxgeio5OukDhEkks.webp', alt: 'Accent Lighting' },
+    { url: 'https://framerusercontent.com/images/ETVoKRP6J6fm6muP2Xs7J4WWKzU.webp', alt: 'Gameday Lighting' },
+    { url: 'https://framerusercontent.com/images/2tuUvfSINeF9nvtfJpAHgJnhHK8.webp', alt: 'Security' },
+    { url: 'https://via.placeholder.com/300x200', alt: 'Holiday Lighting' },
+  ];
   return (
     <main className={styles.main}>
       <Container>
@@ -24,6 +32,8 @@ export default function Home() {
           bgColor="rgba(0, 0, 0, 0.05)"
           fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
         />
+        <Gallery images={images} />
+        <Slide />
         <DisplayMobile />
         <Section
           title="Why choose Relight?"
