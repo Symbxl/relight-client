@@ -15,8 +15,6 @@ export default function Header() {
         padding: "3rem 0",
         overflow: "hidden",
         textAlign: "center",
-        zIndex: 1,
-        overflow: "hidden",
       }}
     >
       <Navigation />
