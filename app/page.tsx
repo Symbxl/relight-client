@@ -33,7 +33,6 @@ export default function Home() {
           fontFamily='"General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
         />
         <Gallery images={images} />
-        <Slide />
         <DisplayMobile />
         <Section
           title="Why choose Relight?"
@@ -73,6 +72,7 @@ export default function Home() {
           margin="2rem 0"
         />
         <DisplayCarousel />
+        <Slide />
         <DisplayFAQ />
         <Footer />
       </Container>
